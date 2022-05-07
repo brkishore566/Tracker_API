@@ -1,4 +1,5 @@
 # Tracker_API
+
 heart rate and respiration rate tracker API
 
 Assumptions made:
@@ -7,4 +8,21 @@ Assumptions made:
 * if user provides the parameter **time_frame** data aggretaion is done in the range of **time_frame**.
 * user_id is considered as **123** as it is being sent from the same device. solution can be extended if it is used for multiple user_id's. filter in the get request and incorporating the same on dataframe.
 * aggregation is done in hourly manner(according to the time_frame provided) from the first time stamp record found in the data frame.
-*
+* File simulator.py is used to write vital record of the patient to the csv file every second by calling the API
+* url http://127.0.0.1:5000/vitals_output gives aggregated data with 15 mins time frame.
+* url http://127.0.0.1:5000/vitals_output?time_frame=30 gives aggregated data with 30 mins time frame. time frame should be greater than 0 and less than 60.
+* url http://127.0.0.1:5000/api/vitals is used to post the data to the csv. below is the payload(can take multiple inputs as well):
+
+{
+    "user_id": "123",
+    "timestamp": "1587631419",
+    "heart_rate": "45",
+    "respiration_rate": "18",
+    "activity": "3"
+}   
+
+* **user_vitals.csv** has the data which is simulated via **simulator.py**.
+* aggregated data can be obtained by calling the api end point http://127.0.0.1:5000/vitals_output?time_frame=30
+
+below are the screen shots of API calls and process:
+
