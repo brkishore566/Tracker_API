@@ -29,4 +29,14 @@ if you are trying to execute this api. start the local server for flask api(defa
 
 below are the screen shots of API calls and process:
 
+1. Post vitals:
+<img width="896" alt="Screenshot 2022-05-08 at 12 23 24 AM" src="https://user-images.githubusercontent.com/47842664/167268261-3f53cc0c-989c-481d-ab16-4831c74ac898.png">
+
+
+2. read aggregated data for default time frame of 15 mins
+<img width="898" alt="Screenshot 2022-05-08 at 12 23 56 AM" src="https://user-images.githubusercontent.com/47842664/167268270-3f25f83b-6c3a-44a3-83b7-98f6b59480f4.png">
+
+
+3. read aggregated data for time frame of 30 mins
+<img width="894" alt="Screenshot 2022-05-08 at 12 28 32 AM" src="https://user-images.githubusercontent.com/47842664/167268276-9c5cf53a-66a4-4cfd-a3a5-850289c9d20c.png">
 
